@@ -9,7 +9,11 @@ import AppProvider from './context';
 const App: React.FC = () => (
   <NavigationContainer>
     <AppProvider>
-      <StatusBar barStyle="light-content" backgroundColor="#312e38" />
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="#312e38"
+        translucent
+      />
       <View
         style={{
           backgroundColor: '#312e38',
