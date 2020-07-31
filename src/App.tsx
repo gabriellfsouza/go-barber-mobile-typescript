@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
+import codePush from 'react-native-code-push';
 import { View, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import Routes from './routes';
@@ -25,4 +26,6 @@ const App: React.FC = () => (
     </AppProvider>
   </NavigationContainer>
 );
-export default App;
+export default codePush({
+  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,
+})(App);
